@@ -42,6 +42,13 @@ run the following command
 
     $ pybot helloapp.robot
 
+::
+
+    $ pybot helloapp2.robot
+
+::
+
+    $ pybot helloapp3_using_composition.robot
 
 How it works
 ------------
