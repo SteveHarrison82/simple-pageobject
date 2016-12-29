@@ -65,8 +65,10 @@ https://github.com/ncbi/robotframework-pageobjects
 In the example of simple-pageobject I have provided, 
 each class needs to properly initialize __init__ and this is a redundant code, that one has to write
 
-b. managing the web-element based sections of web-page could involve a broader support of the library as in
+b. managing the web-element based on sections of web-page could involve a broader support of the library as in
 https://github.com/ncbi/robotframework-pageobjects
+
+c. and much much more, will add once I could comprehend : ))
 
 
 Why page objects makes writing tests easier 
