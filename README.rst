@@ -4,7 +4,7 @@ simple-pageobject
 Overview
 --------
 
-This is a super lightweight page object library. I wanted to remove the mystic myth behind page-object and wanted to provide a package as simple and as light as possible
+This is a super lightweight page object library. I wanted to remove the mystic myth behind page-object and wanted to provide a package as simple and as light as possible that expains how page as objects are dodged around 
 
 The library could be used with any python test framework, including e.g robotframework
 
