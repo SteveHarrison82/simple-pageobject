@@ -13,6 +13,8 @@ the keyword based approach of robot framework.
 Source code
 -----------
 
+This project is inspired from original source code.
+
 Original source code is hosted on github at the following url:
 
 ::
@@ -40,10 +42,6 @@ run the following command
 
     $ pybot demo3.robot
 
-A simple tutorial
-----------------
-
-For a simple tutorial, see https://github.com/boakley/robotframework-pageobjectlibrary/wiki/Tutorial
 
 How it works
 ------------
@@ -72,10 +70,6 @@ An example page object: Look for details in pageobject.py
 A page object representing a login page might look like this:
 
 ::
-
-.
-.
-.
 
     class LoginPage(PageObject):
         PAGE_TITLE = "Login - PageObjectLibrary Demo"
