@@ -6,7 +6,7 @@ Overview
 
 This is a super lightweight page object library. I wanted to remove the mystic myth behind page-object and wanted to provide a package as simple and as light as possible that expains how page as objects are dodged around 
 
-Handling the pages should be based on composition and not based on inheritance from a (god) page. I have given examples of both in this package
+Handling the pages should be based on composition and not based on inheritance from a (god-mother) Master Page. I have given examples of both in this package
 
 The library could be used with any python test framework, including e.g robotframework
 
