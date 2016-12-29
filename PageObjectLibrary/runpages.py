@@ -1,11 +1,9 @@
-
-
+from loginpage_v2_using_composition import LoginPage
 from robot.api import logger
-if __name__ == '__main__' and __package__ is None:
-    from os import sys, path
-    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-    from loginpage_v2_using_composition import LoginPage
-    from locatormap import LocatorMap
+
+if __name__ == '__main__':
+
+
     se = LoginPage()
     se.create_browser("Firefox")
     logger.console ("browser opened ...")
