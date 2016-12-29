@@ -2,8 +2,6 @@ from loginpage_v2_using_composition import LoginPage
 from robot.api import logger
 
 if __name__ == '__main__':
-
-
     se = LoginPage()
     se.create_browser("Firefox")
     logger.console ("browser opened ...")
