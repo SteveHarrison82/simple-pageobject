@@ -1,5 +1,5 @@
 *** Settings ***
-| Variables | ./resources/config.py
+| Variables | ./resources/config.py          # not used anywhere. Considering variables just for demo
 |
 | Library   | pageobject.PageObject
 | Library   | loginpage.LoginPage
