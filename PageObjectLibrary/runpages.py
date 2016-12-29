@@ -11,3 +11,5 @@ if __name__ == '__main__':
     logger.console ("navigated to yahoo sucessfully ...")
     hp.go_to_google()
     logger.console ("navigated to google successfully ...")
+    hp.close_all_browsers()
+    logger.console ("closed all browsers")

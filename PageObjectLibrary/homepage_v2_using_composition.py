@@ -1,5 +1,5 @@
-from .pageobject import PageObject
-from .locatormap import LocatorMap
+from pageobject import PageObject
+from locatormap import LocatorMap
 from robot.api import logger
 
 
