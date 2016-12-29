@@ -36,6 +36,11 @@ repository to have access to the demo files.
 To run the demo, clone the github repository, cd to the folder that
 contains this file, and then run the following command:
 
+This package can be run using any python test framework. However, installation of robotframework is necessary
+Reason: The package uses robotframework-api as a utility when used with other test framework.
+
+
+Using robotframework:
 naviage to folder where demo3.robot available
 run the following command
 ::
