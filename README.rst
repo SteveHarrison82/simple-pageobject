@@ -48,6 +48,19 @@ How it works
 
 An instance of Selenium2Library is cached and the instance is made available in all the pages
 
+Why other page objects libraries are so huge ?
+------------
+
+a. While initializing a page, loads of attributes in that page-object could be pre-populated
+https://github.com/ncbi/robotframework-pageobjects
+
+In the example of simple-pageobject I have provided, 
+each class needs to properly initialize __init__ and this is a redundant code, that one has to write
+
+b. managing the web-element based sections of web-page could involve a broader support of the library as in
+https://github.com/ncbi/robotframework-pageobjects
+
+
 Why page objects makes writing tests easier 
 -------------------------------------------
 
