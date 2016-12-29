@@ -8,8 +8,8 @@
 | Library   | loginpage.LoginPage
 | Library   | homepage.HomePage
 |
-#| Suite Setup | Start webapp and open browser
-#| Suite Teardown | Stop webapp and close all browsers
+| Suite Setup | Start webapp and open browser
+| Suite Teardown | Stop webapp and close all browsers
 
 *** Variables ***
 | ${BROWSER} | chrome
@@ -21,7 +21,6 @@
 
 | Start webapp and open browser
 | | start process | python | ${CONFIG.demo_root}/webapp/demoserver.py
-#| | open browser | ${CONFIG.root_url} | ${BROWSER}
 
 *** Test Cases ***
 
@@ -32,11 +31,3 @@
 | | Enter password | password
 | | Click the submit button
 | | Go to google
-#| | The current page should be | HomePage
-
-# | Login with invalid credentials
-# | | [Setup] | Go to page | LoginPage
-# | | Enter username | Demo User
-# | | Enter password | bogus password
-# | | Click the submit button
-# | | The current page should be | LoginPage
