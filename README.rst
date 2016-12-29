@@ -36,12 +36,20 @@ ExtendedSelenium2Library installed.
 To run the demo, clone the github repository, cd to the folder that
 contains this file, and then run the following command to be used along robot framework:
 
-naviage to folder where demo3.robot available
+naviage to folder where robot file available
+
 run the following command
 ::
 
     $ pybot helloapp.robot
 
+::
+
+    $ pybot helloapp2.robot
+
+::
+
+    $ pybot helloapp3_using_composition.robot
 
 How it works
 ------------
@@ -57,8 +65,12 @@ https://github.com/ncbi/robotframework-pageobjects
 In the example of simple-pageobject I have provided, 
 each class needs to properly initialize __init__ and this is a redundant code, that one has to write
 
-b. managing the web-element based sections of web-page could involve a broader support of the library as in
+b. managing the web-element based on sections of web-page could involve a broader support of the library as in
 https://github.com/ncbi/robotframework-pageobjects
+
+c. and much much more, will add once I could comprehend : ))
+
+
 
 
 Why page objects makes writing tests easier 
