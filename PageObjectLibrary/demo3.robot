@@ -1,5 +1,5 @@
 *** Settings ***
-|
+| Variables | ../resources/config.py
 | Library   | pageobject.PageObject
 | Library   | loginpage.LoginPage
 | Library   | homepage.HomePage
