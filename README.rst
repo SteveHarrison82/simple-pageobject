@@ -1,17 +1,17 @@
-PageObjectLibrary
+simple-pageobject
 =================
 
 Overview
 --------
 
-PageObjectLibrary is a lightweight `robot
-framework <http://www.robotframework.org>`__ keyword library that makes
-it possible to use the page object pattern when testing web pages with
-the keyword based approach of robot framework.
+This is a super lightweight page object library. 
+The library could be used with any python test framework, including e.g robotframework
 
 
 Source code
 -----------
+
+This project is inspired from original source code.
 
 Original source code is hosted on github at the following url:
 
@@ -19,7 +19,10 @@ Original source code is hosted on github at the following url:
 
     [https://github.com/boakley/robotframework-pageobjectlibrary.git]
 
-This package is even simpler    
+This package is even simpler
+
+This package can be run using any python test framework. However, installation of robotframework is necessary
+Reason: The package uses robotframework-api as a utility when used with other test framework.
 
 Running the demo
 ----------------
@@ -28,11 +31,10 @@ In the github repository is a small demonstration suite that includes a
 self-contained webserver and web site.
 
 For the demo to run you must have robotframework 2.9+ and
-Selenium2Library installed. You must also have cloned the github
-repository to have access to the demo files.
+ExtendedSelenium2Library installed. 
 
 To run the demo, clone the github repository, cd to the folder that
-contains this file, and then run the following command:
+contains this file, and then run the following command to be used along robot framework:
 
 naviage to folder where demo3.robot available
 run the following command
@@ -40,30 +42,16 @@ run the following command
 
     $ pybot demo3.robot
 
-A simple tutorial
-----------------
-
-For a simple tutorial, see https://github.com/boakley/robotframework-pageobjectlibrary/wiki/Tutorial
 
 How it works
 ------------
 
 An instance of Selenium2Library is cached and the instance is made available in all the pages
 
-Why page objects makes writing tests easier
+Why page objects makes writing tests easier 
 -------------------------------------------
 
-The purpose of the page object pattern is to encapsulate the knowledge
-of how a web page is constructed into an object. Your test uses the
-object as an interface to the application, isolating your test cases
-from the details of the implementation of a page.
-
-With page objects, developers are free to modify web pages as much as
-they want, and the only thing they need to do to keep existing tests
-from failing is to update the page object class. Because test cases
-aren't directly tied to the implementation, they become more stable and
-more resistent to change as the website matures.
-
+Page object segregates locators from the code
 
 
 An example page object: Look for details in pageobject.py
@@ -72,10 +60,6 @@ An example page object: Look for details in pageobject.py
 A page object representing a login page might look like this:
 
 ::
-
-.
-.
-.
 
     class LoginPage(PageObject):
         PAGE_TITLE = "Login - PageObjectLibrary Demo"
