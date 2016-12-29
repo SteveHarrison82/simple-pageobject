@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161229 01:44:18.606" generator="Robot 3.0 (Python 2.7.9 on win32)">
+<suite source="C:\Users\rramasubramanian\rf-page-boakley\rf\robotframework-pageobjectlibrary-master\PageObjectLibrary\demo3.robot" id="s1" name="Demo3">
+<test id="s1-t1" name="Login with valid credentials">
+<kw type="setup" name="Create Browser" library="loginpage.LoginPage">
+<arguments>
+<arg>Ie</arg>
+</arguments>
+<msg timestamp="20161229 01:44:18.831" level="INFO">Creating an instance of the Ie WebDriver</msg>
+<status status="PASS" endtime="20161229 01:44:22.640" starttime="20161229 01:44:18.830"></status>
+</kw>
+<kw name="Navigate To" library="loginpage.LoginPage">
+<arguments>
+<arg>http://localhost:8000/login.html</arg>
+</arguments>
+<msg timestamp="20161229 01:44:22.641" level="INFO">Opening url 'http://localhost:8000/login.html'</msg>
+<status status="PASS" endtime="20161229 01:44:22.878" starttime="20161229 01:44:22.641"></status>
+</kw>
+<kw name="Enter Username" library="loginpage.LoginPage">
+<doc>Enter the given string into the username field</doc>
+<arguments>
+<arg>Demo User</arg>
+</arguments>
+<msg timestamp="20161229 01:44:22.879" level="INFO">Typing text 'Demo User' into text field 'id=id_username'</msg>
+<status status="PASS" endtime="20161229 01:44:23.961" starttime="20161229 01:44:22.878"></status>
+</kw>
+<kw name="Enter Password" library="loginpage.LoginPage">
+<doc>Enter the given string into the password field</doc>
+<arguments>
+<arg>password</arg>
+</arguments>
+<msg timestamp="20161229 01:44:23.962" level="INFO">Typing text 'password' into text field 'id=id_password'</msg>
+<status status="PASS" endtime="20161229 01:44:24.533" starttime="20161229 01:44:23.962"></status>
+</kw>
+<kw name="Click The Submit Button" library="loginpage.LoginPage">
+<doc>Click the submit button, and wait for the page to reload</doc>
+<msg timestamp="20161229 01:44:24.608" level="INFO">Clicking button 'id=id_submit'.</msg>
+<status status="PASS" endtime="20161229 01:44:28.336" starttime="20161229 01:44:24.533"></status>
+</kw>
+<kw name="Go To Google" library="homepage.HomePage">
+<doc>Enter the given string into the username field</doc>
+<msg timestamp="20161229 01:44:28.337" level="INFO">Opening url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20161229 01:44:31.424" starttime="20161229 01:44:28.337"></status>
+</kw>
+<status status="PASS" endtime="20161229 01:44:31.425" critical="yes" starttime="20161229 01:44:18.827"></status>
+</test>
+<status status="PASS" endtime="20161229 01:44:31.427" starttime="20161229 01:44:18.610"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo3" pass="1">Demo3</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20161229 01:44:18.637" level="ERROR">Error in file 'C:\Users\rramasubramanian\rf-page-boakley\rf\robotframework-pageobjectlibrary-master\PageObjectLibrary\demo3.robot': Variable file '..\resources\config.py' does not exist.</msg>
+</errors>
+</robot>

@@ -4,16 +4,13 @@ from robot.libraries.BuiltIn import BuiltIn
 from contextlib import contextmanager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import staleness_of
-from abc import ABCMeta
-import six
-
 from locatormap import LocatorMap
 from robot.utils.connectioncache import ConnectionCache
-import Selenium2Library
+import ExtendedSelenium2Library
 
 # These two lines needs to be executed only once
 cache_sel2lib = ConnectionCache()
-cache_sel2lib.register (Selenium2Library.Selenium2Library(), alias='page_instance')
+cache_sel2lib.register (ExtendedSelenium2Library.ExtendedSelenium2Library(), alias='page_instance')
 
 class PageObject():
     driver = None
@@ -36,7 +33,7 @@ class PageObject():
     Classes that inherit from this class have access to the
     following properties:
 
-    * se2lib    a reference to an instance of Selenium2Library
+    * se2lib    a reference to an instance of ExtendedSelenium2Library
     * browser   a reference to the current webdriver instance
     * logger    a reference to robot.api.logger
     * locator   a wrapper around the page object's ``_locators`` dictionary 
@@ -68,7 +65,7 @@ class PageObject():
         #import pdb
         #pdb.set_trace()
         return cache_sel2lib.get_connection('page_instance')
-        #return BuiltIn().get_library_instance("Selenium2Library")
+        #return BuiltIn().get_library_instance("ExtendedSelenium2Library")
 
     @property
     def browser(self):
@@ -160,46 +157,6 @@ class LoginPage(PageObject):
         """Click the submit button, and wait for the page to reload"""
         with self._wait_for_page_refresh():
             self.se2lib.click_button(self.locator.submit_button)
-            return HomePage()        
-
-class HomePage(PageObject):
-    """Keywords for the Home page of the demo app
-
-    There are no keywords defined for this page. However, by
-    creating this empty page object we can still use the
-    PageObjectLibrary keywords "Go to page" and "The current
-    page should be"
-    """
-
-    PAGE_TITLE = "Home - PageObjectLibrary Demo"
-    PAGE_URL = "/"
-
-    # these are accessible via dot notaton with self.locator
-    # (eg: self.locator.username, etc)
-    _locators = {
-    }
-
-    
-    def go_to_google(self):
-        """Enter the given string into the username field"""
-        self.se2lib.go_to("http://www.google.com")
-    
-    
-
-
-if __name__ == "__main__":
-    se1 = PageObject()
-    #se.se2lib.create_webdriver("Ie")
-    se1.create_browser("Ie")
-    se = se1.navigate_to("http://localhost:8000/login.html")
-
-    
-    #login.create_webdriver("Ie")
-    se.enter_username("Demo User")
-    se.enter_password("password")
-    hp = se.click_the_submit_button()
-    
-    hp.go_to_google()
-    
+            return HomePage()
     
     

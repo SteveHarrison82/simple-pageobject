@@ -5,8 +5,8 @@
 | Variables | ../resources/config.py
 |
 | Library   | pageobject.PageObject
-| Library   | pageobject.LoginPage
-| Library   | pageobject.HomePage
+| Library   | loginpage.LoginPage
+| Library   | homepage.HomePage
 |
 #| Suite Setup | Start webapp and open browser
 #| Suite Teardown | Stop webapp and close all browsers
