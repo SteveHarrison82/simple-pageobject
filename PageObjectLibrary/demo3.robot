@@ -26,7 +26,8 @@
 *** Keywords ***
 | Stop webapp and close all browsers
 | | Terminate all processes
-| | pageobject.PageObject.Close All Browsers
+| | pageobject.PageObject.Close All Browsers             # when libraries are built using compostion, we dont have to do this ugly thing:
+                                                         # pageobject.PageObject.Close All Browsers 
 
 
 
