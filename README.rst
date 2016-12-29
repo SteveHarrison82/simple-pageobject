@@ -40,7 +40,7 @@ naviage to folder where demo3.robot available
 run the following command
 ::
 
-    $ pybot demo3.robot
+    $ pybot helloapp.robot
 
 
 How it works
