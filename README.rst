@@ -76,7 +76,6 @@ each class needs to properly initialize __init__ and this is a redundant code, t
 
 b. managing the web-element based on components (sections) of web-page could involve a broader support of the library as in
 https://github.com/ncbi/robotframework-pageobjects. This typically adds complexity. To keep it simple, handling the components should be handled by coder and not be provided as a generic-support from the library: https://github.com/ncbi/robotframework-pageobjects
-It unnecessarily causes huge complexity
 
 c. and much much more, will add once I could comprehend : ))
 
@@ -84,7 +83,7 @@ c. and much much more, will add once I could comprehend : ))
 Why page objects makes writing tests easier 
 -------------------------------------------
 
-Page object segregates locators from the code
+main idea: Page object segregates locators from the code
 
 
 An example page object: Look for details in *.py. Here is an example of loginpage.py
