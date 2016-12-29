@@ -1,5 +1,6 @@
-from pageobject import PageObject
-from locatormap import LocatorMap
+from .pageobject import PageObject
+from .locatormap import LocatorMap
+from robot.api import logger
 
 
 class HomePage ():
@@ -21,10 +22,12 @@ class HomePage ():
     }
 
     def __init__(self):
+        self.logger = logger
         self.po = PageObject()
         self.se2lib = self.po.se2lib
         self.locator = LocatorMap(getattr(self, "_locators", {}))
     
     def go_to_google(self):
         """Enter the given string into the username field"""
+        logger.console ("navigating to google")
         self.se2lib.go_to("http://www.google.com")

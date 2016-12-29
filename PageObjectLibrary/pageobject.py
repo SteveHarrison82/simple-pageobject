@@ -1,6 +1,6 @@
-from __future__ import absolute_import, unicode_literals
+#from __future__ import absolute_import, unicode_literals
 import robot.api
-from robot.libraries.BuiltIn import BuiltIn
+
 from contextlib import contextmanager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import staleness_of
@@ -64,6 +64,7 @@ class PageObject():
         global cache_sel2lib
         #import pdb
         #pdb.set_trace()
+
         return cache_sel2lib.get_connection('page_instance')
         #return BuiltIn().get_library_instance("ExtendedSelenium2Library")
 

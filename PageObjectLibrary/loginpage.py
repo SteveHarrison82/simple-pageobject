@@ -1,6 +1,7 @@
 from pageobject import PageObject
 from homepage import HomePage
 
+
 class LoginPage(PageObject):
     PAGE_TITLE = "Login - PageObjectLibrary Demo"
     PAGE_URL = "/login.html"
