@@ -1,4 +1,4 @@
-PageObjectLibrary
+simple-pageobject
 =================
 
 Overview
