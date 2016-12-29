@@ -18,19 +18,14 @@ class LoginPage(PageObject):
     
     def navigate_to(self, url):
         self.se2lib.go_to(url)
-
-    def login_as_a_normal_user(self):
-        config = BuiltIn().get_variable_value("${CONFIG}")
-        self.enter_username(config.username)
-        self.enter_password(config.password)
-        with self._wait_for_page_refresh():
-            self.click_the_submit_button()
+        if 'yahoo' in url:
+            return HomePage()
 
     def enter_username(self, username):
         """Enter the given string into the username field"""
         self.se2lib.input_text(self.locator.username, username)
 
-    def enter_password(self,password):
+    def enter_password(self, password):
         """Enter the given string into the password field"""
         self.se2lib.input_text(self.locator.password, password)
 
@@ -39,3 +34,4 @@ class LoginPage(PageObject):
         with self._wait_for_page_refresh():
             self.se2lib.click_button(self.locator.submit_button)
             return HomePage()
+
