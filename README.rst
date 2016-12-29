@@ -4,7 +4,8 @@ simple-pageobject
 Overview
 --------
 
-This is a super lightweight page object library. 
+This is a super lightweight page object library. I wanted to remove the mystic myth behind page-object and wanted to provide a package as simple and as light as possible
+
 The library could be used with any python test framework, including e.g robotframework
 
 
@@ -50,6 +51,12 @@ run the following command
 ::
 
     $ pybot helloapp3_using_composition.robot
+    
+or if you are not using robotframework, simply run the python file
+::
+    python runpages.py
+    
+    
 
 How it works
 ------------
