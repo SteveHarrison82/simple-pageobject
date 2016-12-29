@@ -36,7 +36,8 @@ ExtendedSelenium2Library installed.
 To run the demo, clone the github repository, cd to the folder that
 contains this file, and then run the following command to be used along robot framework:
 
-naviage to folder where demo3.robot available
+naviage to folder where robot file available
+
 run the following command
 ::
 
