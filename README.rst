@@ -54,7 +54,7 @@ Why page objects makes writing tests easier
 Page object segregates locators from the code
 
 
-An example page object: Look for details in pageobject.py
+An example page object: Look for details in *.py. Here is an example of loginpage.py
 ----------------------
 
 A page object representing a login page might look like this:
