@@ -22,12 +22,14 @@ class LoginPage():
         self.se2lib = self.po.se2lib
         self.locator = LocatorMap(getattr(self, "_locators", {}))
 
+    def navigate_to(self, url):
+        self.se2lib.go_to(url)
+        if 'yahoo' in url:
+            return HomePage()
+
     def create_browser(self, browser_name):
         self.se2lib.create_webdriver(browser_name)
     
-    def navigate_to(self, url):
-        self.se2lib.go_to(url)
-
     def enter_username(self, username):
         """Enter the given string into the username field"""
         self.se2lib.input_text(self.locator.username, username)
