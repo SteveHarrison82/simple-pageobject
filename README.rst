@@ -6,6 +6,8 @@ Overview
 
 This is a super lightweight page object library. I wanted to remove the mystic myth behind page-object and wanted to provide a package as simple and as light as possible that expains how page as objects are dodged around 
 
+Handling the pages should be based on composition and not based on inheritance from a (god) page. I have given examples of both in this package
+
 The library could be used with any python test framework, including e.g robotframework
 
 
@@ -72,12 +74,11 @@ https://github.com/ncbi/robotframework-pageobjects
 In the example of simple-pageobject I have provided, 
 each class needs to properly initialize __init__ and this is a redundant code, that one has to write
 
-b. managing the web-element based on sections of web-page could involve a broader support of the library as in
-https://github.com/ncbi/robotframework-pageobjects
+b. managing the web-element based on components (sections) of web-page could involve a broader support of the library as in
+https://github.com/ncbi/robotframework-pageobjects. This typically adds complexity. To keep it simple, handling the components should be handled by coder and not be provided as a generic-support from the library: https://github.com/ncbi/robotframework-pageobjects
+It unnecessarily causes huge complexity
 
 c. and much much more, will add once I could comprehend : ))
-
-
 
 
 Why page objects makes writing tests easier 
