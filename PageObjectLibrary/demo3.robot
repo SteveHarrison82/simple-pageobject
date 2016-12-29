@@ -1,14 +1,17 @@
 *** Settings ***
-| Variables | ../resources/config.py
+| Variables | ./resources/config.py
+|
 | Library   | pageobject.PageObject
 | Library   | loginpage.LoginPage
 | Library   | homepage.HomePage
+| Library   | Process
 |
 | Suite Setup | Start webapp and open browser
 | Suite Teardown | Stop webapp and close all browsers
 
+
 *** Variables ***
-| ${BROWSER} | chrome
+| ${BROWSER} | Chrome
 
 *** Test Cases ***
 
@@ -23,7 +26,9 @@
 *** Keywords ***
 | Stop webapp and close all browsers
 | | Terminate all processes
-| | Close all browsers
+| | pageobject.PageObject.Close All Browsers
+
+
 
 | Start webapp and open browser
-| | start process | python | ${CONFIG.demo_root}/webapp/demoserver.py
+| | start process | python | ./webapp/demoserver.py

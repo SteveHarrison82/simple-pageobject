@@ -118,4 +118,8 @@ class PageObject():
         self.logger.info("expected title: '%s'" % expected_title)
         self.logger.info("  actual title: '%s'" % actual_title)
         raise Exception("expected title to be '%s' but it was '%s'" % (expected_title, actual_title))
-        return False    
+        return False
+
+    def close_all_browsers(self):
+        self.se2lib.close_all_browsers()
+            
